@@ -12,6 +12,7 @@ void main(int argc, char *argv[])
 	printf("should print 20 %d \n", mux(10, 20, 2));
 	
 	int sum;
+	printf("conflict");
 	bool carry;
 
 	int errorCode= alu(12, 1, 0,&sum, &carry);
