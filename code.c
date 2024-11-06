@@ -126,13 +126,18 @@ char ArSpace[N], ArNoSpace[N];
 
 
 void check(char *argv[]) {
-    FILE *fp = fopen(argv[1], "r");
+
+	char in[100],out[100];
+	sprintf(in,"%s.asm",argv[1]);
+        sprintf(out,"%s.bin",argv[1]);
+
+    FILE *fp = fopen(in, "r");
     if (fp == NULL) {
         printf("File not found\n");
         return;
     }
 
-    FILE *ptr = fopen("fibonacci.bin", "w");
+    FILE *ptr = fopen(out, "w");
     if (ptr == NULL) {
         printf("Could not open output file\n");
         fclose(fp);
