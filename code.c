@@ -119,7 +119,7 @@ char ArSpace[N], ArNoSpace[N];
         printf("J=7 --> 10110111\n");
         fprintf(ptr, "10110111\n");
     } else {
-        printf("End! %s\n", ArNoSpace);
+        printf("End %s\n", ArNoSpace);
     }
 }
 
