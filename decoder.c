@@ -1,24 +1,28 @@
 #include <stdio.h>
-
-int decoder(int in1, int in2, int* out1,int* out2,int* out3,int* out4)
+#include <stdbool.h>
+int decoder(bool in1, bool in2, int* out1,int* out2,int* out3,int* out4)
 {
-	
-	switch (in1*10+in2)
+	*out1=0;
+	*out2=0;
+	*out3=0;
+	*out4=0;
+	switch (in1+in2*10)
 	{
- 	case 0:
+	case 0:
 		*out1=1;
-        	break;
+		break;
 	case 10:
 		*out2=1;
-        	break;
+		break;
 	case 1:
 		*out3=1;
-        	break;
+		break;
 	case 11:
 		*out4=1;
-        	break;
+		break;
 	default:
-		return;
+		return 1;
 	}
 	return 0;
 }
+
