@@ -118,8 +118,6 @@ char ArSpace[N], ArNoSpace[N];
     } else if (strcmp(ArNoSpace, "J=7") == 0) {
         printf("J=7 --> 10110111\n");
         fprintf(ptr, "10110111\n");
-    } else {
-        printf("End %s\n", ArNoSpace);
     }
 }
 
